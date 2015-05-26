@@ -1,0 +1,31 @@
+* This file
+  - This file is for keeping notes about whatever it is I am working on and
+    thinking about in regards to bikestuff.py
+* giving gear a single responsibility
+  * Depend on behavior, not data (pg 24)
+  * writing the function like this
+    - def ratio(self):
+      return(chainring /cog)
+  * protects the input data from being accessed directly. The function refers
+    to "self" and the object has its own instance of chainring declared in the
+    constructor.
+    self.chainring = chainring (passed in)
+  * I think this is especially important to keep straight in python, because
+    it is easy in python to accidentally access a higher scope than you intended
+    to. Actually, I like that this will encourage me to be careful about how I
+    reference things.
+* Wheelify in book and pythonizing it
+** Book version
+   Wheel = Struct.new(:rim, :tire)
+   def wheelify(data)
+     data.collect {|cell|
+       Wheel.new(cell[0], cell[1])
+** Notes on book version
+   Wheel = Struct.new(:rim, :tire)
+   # Works like python named tuple.
+   # this particular one is unnamed,
+   def wheelify(data)
+     data.collect {|cell|
+       Wheel.new(cell[0], cell[1])
+     # data is some kind of iterable, in python list, tuple, or array
+     # . collect is like a lambda and map function
