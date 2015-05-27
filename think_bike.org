@@ -33,3 +33,11 @@
 ** Why?
    - In reality wheel is not part of a gear, although they do interact.
    - Therfore the best move is to separate them out with an object.
+* dependency injection
+** Notice gear takes wheel as a parameter
+   - Wheel could be anything I wanted to pass to it.
+   - I pass it a DUCK object. If the wheel class were renamed for
+     some reason or substantially changed in some way, so long as the object
+     passed in has the diameter function, it will work.
+   - Perhaps this is still not perfect because Gear is still dependent on
+     the object having a diameter function available to it?
