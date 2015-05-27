@@ -13,9 +13,17 @@ class Gear:
     def gear_inches(self):
         return(ratio * wheel.diameter)
 
-    Wheel = namedtuple("Wheel", ['rim', 'tire'])
-    def diameter():
-        return(Wheel.rim + (Wheel.tire *2))
+
+class Wheel:
+    def __init__(self, rim, tire):
+        self.rim = rim
+        self.tire = tire
+
+    #Wheel = namedtuple("Wheel", [rim, tire])
+    def diameter(self):
+        return(self.rim +(self.tire * 2))
+    def circumference(self):
+        return(self.rim * math.pi)
 
 #main
 bike = Gear(52,11, 26, 1.5x)
