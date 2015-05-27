@@ -41,3 +41,33 @@
      passed in has the diameter function, it will work.
    - Perhaps this is still not perfect because Gear is still dependent on
      the object having a diameter function available to it?
+* Things I learned about today
+** multiple args
+   * This is from some python 2 stuff, so needs to be checked to see if it
+     changed in python 3.
+   * source: http://simeonfranklin.com/blog/2012/jul/1/python-decorators-in-12-steps/
+     Part 11
+   * *args
+     - For a function taking an unknown number of args
+       def print_things(*args):
+         for i in args:
+           print(i)
+     - Also for implicitly unpacking a list.
+       def print_things(a,b,c):
+         print(a)
+         print(b)
+         print(c)
+
+       l = ["foo", "bar", "baz"]
+
+       print_things(*l)
+
+   * **kwargs
+     - For a function taking an unknown number of dicts
+     - pretty much the same implementation.
+** wrappers
+   - Actually I am going to need to play with this some more before I write
+     about it.
+   - Looks like:
+     @func_wrapper
+     def do_thing():
