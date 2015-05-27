@@ -10,7 +10,7 @@ class Gear():
         return(self.chainring / self.cog)
 
     def gear_inches(self):
-        return(self.ratio() *(wheel.diameter())
+        return(self.ratio() *(wheel.diameter()))
 
 
 class Wheel():
