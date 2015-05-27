@@ -26,5 +26,8 @@ class Wheel:
         return(self.rim * math.pi)
 
 #main
-bike = Gear(52,11, 26, 1.5x)
-print(bike.ratio)
+#args 52 11 26 1.5
+wheel = Wheel(26,1.5)
+bike = Gear(52,11,wheel)
+print(bike.ratio())
+print(bike.gear_inches())
