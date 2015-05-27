@@ -29,3 +29,7 @@
        Wheel.new(cell[0], cell[1])
      # data is some kind of iterable, in python list, tuple, or array
      # . collect is like a lambda and map function
+* Separate wheel into its own class
+** Why?
+   - In reality wheel is not part of a gear, although they do interact.
+   - Therfore the best move is to separate them out with an object.
