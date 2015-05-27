@@ -1,7 +1,6 @@
-from collections import namedtuple
 from math import pi
 
-class Gear:
+class Gear():
     def __init__(self, chainring, cog, wheel):
         self.chainring = chainring
         self.cog = cog
@@ -14,14 +13,14 @@ class Gear:
         return(self.ratio() *(wheel.diameter())
 
 
-class Wheel:
+class Wheel():
     def __init__(self, rim, tire):
         self.rim = rim
         self.tire = tire
 
-    #Wheel = namedtuple("Wheel", [rim, tire])
     def diameter(self):
         return(self.rim +(self.tire * 2))
+
     def circumference(self):
         return(self.rim * math.pi)
 
