@@ -1,4 +1,5 @@
 from collections import namedtuple
+from math import pi
 
 class Gear:
     def __init__(self, chainring, cog, rim, tire):
